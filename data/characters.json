@@ -1,0 +1,338 @@
+{
+  "version": "1.0.0",
+  "controlType": "classic",
+  "characters": [
+    {
+      "id": "ryu",
+      "name": "リュウ",
+      "concept": "波動で動かして、飛びは昇龍。中距離の判断で勝つキャラ",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝昇龍拳", "note": "最初は弱P版だけでOK" },
+        { "key": "poke", "label": "牽制（1個）", "input": "236P（↓↘→ + P）＝波動拳", "note": "当てる必要なし。撃ったら対空準備" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 236LP", "note": "入らなければ投げでOK" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "2MK → 236P", "note": "ヒット確認不要。当たったら出す" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "2MK →（DRキャンセル）→ 投げ", "note": "DRはパリィ押しながら前前。ガードでもOK" }
+      ],
+      "winPlan": {
+        "baseRange": "中距離",
+        "do3": ["波動拳で相手を動かす", "飛んだら昇龍拳", "地上は2MK（しゃがみ中K）"],
+        "onHit": "2MK → 236P",
+        "closeRule": "2LP → 投げ（欲張らない）",
+        "farRule": "波動 → 昇龍の構えまでセット",
+        "vsJumps": "波動の頻度を下げて対空待ち",
+        "ng": ["意味のない昇龍", "前ジャンプ多用"],
+        "goalWeek1": "対空を試合で3回以上出す"
+      },
+      "matchNav": {
+        "far": ["236P（波動）", "撃ったら623P（昇龍）構え"],
+        "mid": ["2MK中心", "当たったら236P", "ガードなら止まる（欲張らない）"],
+        "close": ["2LP → 投げ", "相手が暴れる：一回ガード → 2LP"],
+        "defense": ["ガード多め＋投げ抜け意識", "無敵技は原則使わない"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め・無理に動かない", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "623Pだけ30回", "match": "飛びは全部対空狙い", "review": "対空出た回数" },
+        { "day": 3, "training": "236Pを一定間隔で撃つ", "match": "波動→対空の意識", "review": "波動後に昇龍構えた？" },
+        { "day": 4, "training": "2MK→236Pを50回", "match": "当たったら出す（確認不要）", "review": "1回でも決まった？" },
+        { "day": 5, "training": "2MK→DR→投げ", "match": "ガードでも投げに行く", "review": "DRで触れた回数" },
+        { "day": 6, "training": "起き攻め：投げ/2LP", "match": "2択だけ・欲張らない", "review": "通った回数" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "対空/2MK/波動の3点だけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["昇龍拳を当てにいかない", "前ジャンプしない", "対空が出れば今日は勝ち"]
+    },
+
+    {
+      "id": "luke",
+      "name": "ルーク",
+      "concept": "強い通常技で触って、ラッシュで近づいて、投げで崩す",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝ライジングアッパー", "note": "最初は弱P版だけでOK" },
+        { "key": "poke", "label": "牽制（1個）", "input": "2MP（しゃがみ中P）", "note": "中距離は基本これだけ" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 214LP（フラッシュナックル）", "note": "入らなければ投げでOK" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "2LP → 2LP → 214LP", "note": "ヒット確認不要。当たったら出す" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "2MP →（DRキャンセル）→ 投げ", "note": "DRはパリィ押しながら前前。ガードでもOK" }
+      ],
+      "winPlan": {
+        "baseRange": "中〜近",
+        "do3": ["中距離の2MPで触る", "触れたらDRで近づく（1パターン固定）", "近距離は2LP→投げ"],
+        "onHit": "2LP → 2LP → 214LP",
+        "closeRule": "1回触ったら一旦止まる（連打しない）",
+        "farRule": "歩きガードで詰める（ダッシュで突っ込まない）",
+        "vsJumps": "飛びは623P（対空）だけ狙う",
+        "ng": ["DR連打", "ボタン押しすぎで差し返される"],
+        "goalWeek1": "2MPで触る→DRで触るを試合で各2回"
+      },
+      "matchNav": {
+        "far": ["歩きガードで詰める", "ダッシュで突っ込まない"],
+        "mid": ["2MP", "当たったら2LP→2LP→214LP", "ガードなら止まる"],
+        "close": ["2LP → 投げ", "相手が暴れる：2LP→一回止める（ガード）"],
+        "defense": ["ガード多め＋投げ抜け意識", "暴れない日を作る"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め・無理に動かない", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "623P（対空）を30回", "match": "相手が飛んだら対空だけ狙う", "review": "対空出た回数" },
+        { "day": 3, "training": "2MPを100回", "match": "中距離は2MPだけ", "review": "2MPが当たった回数" },
+        { "day": 4, "training": "2LP→2LP→214LPを50回", "match": "当たったら出す（確認不要）", "review": "1回でも決まった？" },
+        { "day": 5, "training": "2MP→DR→投げ", "match": "ガードでも投げに行く", "review": "DRで触れた回数" },
+        { "day": 6, "training": "起き攻め：投げ/2LP", "match": "2択のみ・欲張らない", "review": "起き攻め通った？" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "2MP/対空/DRの3点だけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["DRを連打しない（触れた時だけ）", "押しっぱなしにしない（止まる勇気）", "触れた回数＝強さ"]
+    },
+
+    {
+      "id": "marisa",
+      "name": "マリーザ",
+      "concept": "一撃が重い。触ったら押し切る“単純で強い”パワーキャラ",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "2HP（しゃがみ強P）", "note": "まず“出る対空”を1個固定" },
+        { "key": "poke", "label": "牽制（1個）", "input": "5MP（立ち中P）", "note": "中距離はこれで触る" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 236LP（グラディウス）", "note": "困ったら投げでOK" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "5MP → 236P（グラディウス）", "note": "ヒット確認不要。当たったら出す" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "5MP →（DRキャンセル）→ 投げ", "note": "ガードでも投げに行く（単純に勝てる）" }
+      ],
+      "winPlan": {
+        "baseRange": "中〜近",
+        "do3": ["5MPで触る", "触れたらDRで近づく", "近距離は投げ or 236Pで締める"],
+        "onHit": "5MP → 236P",
+        "closeRule": "投げを通す（最短勝ち筋）",
+        "farRule": "歩きガードで詰める（無理に突っ込まない）",
+        "vsJumps": "2HP対空を最優先",
+        "ng": ["意味のない突進連打", "ボタン押しすぎ"],
+        "goalWeek1": "投げを試合で5回通す"
+      },
+      "matchNav": {
+        "far": ["歩きガードで詰める", "無理に技を振らない"],
+        "mid": ["5MP", "当たったら236P", "ガードなら止まる→次は投げ"],
+        "close": ["投げ", "2LP→投げ", "暴れに負けたら一回ガード"],
+        "defense": ["ガード多め＋投げ抜け意識", "焦って暴れない"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "2HP対空30回", "match": "飛びは全部2HP", "review": "対空出た回数" },
+        { "day": 3, "training": "5MPを100回", "match": "中距離は5MPだけ", "review": "5MP当たった回数" },
+        { "day": 4, "training": "5MP→236Pを50回", "match": "当たったら出す（確認不要）", "review": "1回でも決まった？" },
+        { "day": 5, "training": "5MP→DR→投げ", "match": "ガードでも投げ", "review": "DRで触れた回数" },
+        { "day": 6, "training": "起き攻め：投げ/2LP", "match": "2択のみ", "review": "通った回数" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "5MP/投げ/対空だけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["突っ込みすぎない", "投げが勝ち筋", "対空を最優先"]
+    },
+
+    {
+      "id": "ken",
+      "name": "ケン",
+      "concept": "素早く触って一気に近距離へ。攻めのテンプレが強い",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝昇龍拳", "note": "最初は弱P版固定でOK" },
+        { "key": "poke", "label": "牽制（1個）", "input": "2MK（しゃがみ中K）", "note": "中距離はこれで触る" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 236LP（波動拳）", "note": "入らなければ投げでOK" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "2MK → 236P", "note": "ヒット確認不要。当たったら出す" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "2MK →（DRキャンセル）→ 投げ", "note": "ガードでも投げで完結" }
+      ],
+      "winPlan": {
+        "baseRange": "中〜近",
+        "do3": ["2MKで触る", "DRで近づく", "近距離は投げ"],
+        "onHit": "2MK → 236P",
+        "closeRule": "投げで崩す（最短）",
+        "farRule": "歩きガードで詰める",
+        "vsJumps": "623P対空を徹底",
+        "ng": ["前ジャンプ多用", "無理な昇龍"],
+        "goalWeek1": "DRから投げを試合で3回通す"
+      },
+      "matchNav": {
+        "far": ["歩きガードで詰める", "焦って飛ばない"],
+        "mid": ["2MK", "当たったら236P", "ガードなら止まる→次は投げ"],
+        "close": ["投げ", "2LP→投げ", "暴れられたら一回ガード"],
+        "defense": ["ガード多め＋投げ抜け", "無敵は乱発しない"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "623P対空30回", "match": "飛びは全部対空", "review": "対空出た回数" },
+        { "day": 3, "training": "2MKを100回", "match": "中距離は2MKだけ", "review": "2MK当たった回数" },
+        { "day": 4, "training": "2MK→236Pを50回", "match": "当たったら出す", "review": "決まった回数" },
+        { "day": 5, "training": "2MK→DR→投げ", "match": "ガードでも投げ", "review": "DRで触れた回数" },
+        { "day": 6, "training": "起き攻め：投げ/2LP", "match": "2択のみ", "review": "通った回数" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "2MK/対空/投げだけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["飛びすぎない", "無理な昇龍しない", "DR→投げが勝ち筋"]
+    },
+
+    {
+      "id": "chunli",
+      "name": "春麗",
+      "concept": "中距離の制圧と対空が強い。チャージに慣れると一気に安定",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "22K（↓↓ + K）＝天昇脚（Tensho Kicks）", "note": "入力が簡単で初心者向き" },
+        { "key": "poke", "label": "牽制（1個）", "input": "5MK（立ち中K）", "note": "中距離で触る主力" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 236K（百裂脚）", "note": "足が届かないなら投げでOK" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "5MK → 236K（百裂脚）", "note": "ヒット確認不要。当たったら出す" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "5MK →（DRキャンセル）→ 投げ", "note": "DRはパリィ押しながら前前" }
+      ],
+      "winPlan": {
+        "baseRange": "中距離",
+        "do3": ["5MKで触る", "飛びは22Kで落とす", "近距離は投げ"],
+        "onHit": "5MK → 236K",
+        "closeRule": "投げ or 2LPで触って止める",
+        "farRule": "歩きガードで距離調整（飛ばない）",
+        "vsJumps": "22Kを最優先",
+        "ng": ["無理に前ジャンプ", "チャージ技を焦って暴発"],
+        "goalWeek1": "22K対空を試合で3回出す"
+      },
+      "matchNav": {
+        "far": ["歩きガードで調整", "飛ばない"],
+        "mid": ["5MK", "当たったら236K", "ガードなら止まる"],
+        "close": ["投げ", "2LP→投げ", "暴れられたら一回ガード"],
+        "defense": ["ガード多め＋投げ抜け", "焦って暴れない"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "22K対空30回", "match": "飛びは全部22K", "review": "対空出た回数" },
+        { "day": 3, "training": "5MKを100回", "match": "中距離は5MKだけ", "review": "5MK当たった回数" },
+        { "day": 4, "training": "5MK→236Kを50回", "match": "当たったら出す", "review": "決まった回数" },
+        { "day": 5, "training": "5MK→DR→投げ", "match": "ガードでも投げ", "review": "DRで触れた回数" },
+        { "day": 6, "training": "起き攻め：投げ/2LP", "match": "2択のみ", "review": "通った回数" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "5MK/対空/投げだけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["飛びすぎない", "まず22K対空", "触ったら止まる"]
+    },
+
+    {
+      "id": "guile",
+      "name": "ガイル",
+      "concept": "弾と対空で“負けない”。守りの型がそのまま勝ち筋になる",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "[溜め]2→8K（下溜め→上 + K）＝フラッシュキック", "note": "溜めは“しゃがみガード”で兼ねる" },
+        { "key": "poke", "label": "牽制（1個）", "input": "2MP（しゃがみ中P）", "note": "地上はこれで触る" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 2MP", "note": "確実優先（必殺に繋げなくてOK）" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "2MP → [溜め]4→6P（後ろ溜め→前 + P）＝ソニックブーム", "note": "溜めはガードしながら作る" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "2MP →（DRキャンセル）→ 投げ", "note": "攻めは最小限でOK" }
+      ],
+      "winPlan": {
+        "baseRange": "遠〜中",
+        "do3": ["ソニックブームで近づかせない", "飛びはフラッシュキック", "地上は2MP"],
+        "onHit": "2MP → ソニックブーム",
+        "closeRule": "投げでリセット（長居しない）",
+        "farRule": "弾→対空の型を崩さない",
+        "vsJumps": "飛んだら必ずフラッシュキック",
+        "ng": ["無理に前へ行く", "チャージを捨てて暴れる"],
+        "goalWeek1": "対空を試合で3回以上出す"
+      },
+      "matchNav": {
+        "far": ["[溜め]4→6P（ソニック）", "撃ったら下溜め（対空準備）"],
+        "mid": ["2MP", "当たったらソニック", "ガードなら止まる"],
+        "close": ["投げ", "2LP→投げ", "危なければ離れる"],
+        "defense": ["ガード多め＋投げ抜け", "チャージ維持が最優先"]
+      },
+      "training7days": [
+        { "day": 1, "training": "溜め維持（しゃがみガード）", "match": "溜めを捨てない", "review": "溜め維持できた？" },
+        { "day": 2, "training": "フラッシュキック30回", "match": "飛びは全部対空", "review": "対空出た回数" },
+        { "day": 3, "training": "ソニック30回（溜め）", "match": "弾→対空の型", "review": "弾の後に下溜め戻れた？" },
+        { "day": 4, "training": "2MP→ソニック50回", "match": "当たったら出す", "review": "決まった回数" },
+        { "day": 5, "training": "2MP→DR→投げ", "match": "攻めは最小限", "review": "DRで触れた回数" },
+        { "day": 6, "training": "投げ抜け練習", "match": "防御優先", "review": "投げ抜けできた？" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "弾/対空/2MPだけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["チャージを捨てない", "弾→対空の型を崩さない", "勝とうとしすぎない"]
+    },
+
+    {
+      "id": "jamie",
+      "name": "ジェイミー",
+      "concept": "まず飲む→強くなる。触ったら連携で押す“育成型”",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "623K（→↓↘ + K）＝アローキック", "note": "まずこれだけでOK" },
+        { "key": "poke", "label": "牽制（1個）", "input": "2MK（しゃがみ中K）", "note": "中距離はこれで触る" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 623LK", "note": "入らなければ投げ" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "2MK → 236P（フリーフロー・ストライクス1段目）", "note": "ヒット確認不要。まず1段だけでOK" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "2MK →（DRキャンセル）→ 投げ", "note": "ガードでも投げに行く" }
+      ],
+      "winPlan": {
+        "baseRange": "中〜近",
+        "do3": ["2MKで触る", "触れたらDRで近づく", "隙があれば22Pで飲む"],
+        "onHit": "2MK → 236P（まず1段）",
+        "closeRule": "投げで崩す／欲張らない",
+        "farRule": "無理に突っ込まない（歩きガード）",
+        "vsJumps": "623K対空を優先",
+        "ng": ["飲めないのに無理攻め", "連携を伸ばしすぎて反撃をもらう"],
+        "goalWeek1": "1試合に最低1回は22Pで飲む"
+      },
+      "matchNav": {
+        "far": ["歩きガードで詰める", "飲めるなら22P（安全時のみ）"],
+        "mid": ["2MK", "当たったら236P（1段）", "ガードなら止まる→投げ"],
+        "close": ["投げ", "2LP→投げ", "暴れられたら一回ガード"],
+        "defense": ["ガード多め＋投げ抜け", "焦って暴れない"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "623K対空30回", "match": "飛びは全部対空", "review": "対空出た回数" },
+        { "day": 3, "training": "22P（飲み）を10回", "match": "安全時だけ1回飲む", "review": "飲めた試合数" },
+        { "day": 4, "training": "2MK→236Pを50回", "match": "まず1段で止める", "review": "決まった回数" },
+        { "day": 5, "training": "2MK→DR→投げ", "match": "ガードでも投げ", "review": "DRで触れた回数" },
+        { "day": 6, "training": "2LP→投げの反復", "match": "近距離は投げで完結", "review": "投げ通った回数" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "2MK/対空/飲みだけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["連携を伸ばしすぎない", "安全時だけ飲む", "対空を忘れない"]
+    },
+
+    {
+      "id": "ed",
+      "name": "エド",
+      "concept": "長い通常技で触って、ブリッツで締める。反応対空も強い",
+      "minimalKit": [
+        { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝サイコアッパー（Psycho Uppercut）", "note": "まず弱P版でOK" },
+        { "key": "poke", "label": "牽制（1個）", "input": "5MK（立ち中K）", "note": "長い通常技で触る意識" },
+        { "key": "punish", "label": "近距離の罰（確反）", "input": "2LP → 2LP → 214LP（サイコブリッツ）", "note": "214P=逆波動+P" },
+        { "key": "easyCombo", "label": "簡単コンボ（1個）", "input": "2LP → 2LP → 214P（サイコブリッツ）", "note": "ヒット確認不要。当たったら出す" },
+        { "key": "rushStarter", "label": "ラッシュ始動（1個）", "input": "5MK →（DRキャンセル）→ 投げ", "note": "ガードでも投げで完結" }
+      ],
+      "winPlan": {
+        "baseRange": "中距離",
+        "do3": ["5MKで触る", "飛びは623P", "当たったら214Pで締める"],
+        "onHit": "2LP → 2LP → 214P",
+        "closeRule": "投げで崩す（欲張らない）",
+        "farRule": "歩きガードで間合いを保つ",
+        "vsJumps": "623P対空を最優先",
+        "ng": ["無理な突進", "コンボを伸ばそうとしてミスる"],
+        "goalWeek1": "214P締めを試合で3回決める"
+      },
+      "matchNav": {
+        "far": ["歩きガードで調整", "無理に突っ込まない"],
+        "mid": ["5MK", "当たったら2LP→2LP→214P", "ガードなら止まる"],
+        "close": ["投げ", "2LP→投げ", "暴れられたら一回ガード"],
+        "defense": ["ガード多め＋投げ抜け", "焦って暴れない"]
+      },
+      "training7days": [
+        { "day": 1, "training": "歩き/ガード/投げ抜け", "match": "ガード多め", "review": "投げ抜け意識できた？" },
+        { "day": 2, "training": "623P対空30回", "match": "飛びは全部対空", "review": "対空出た回数" },
+        { "day": 3, "training": "5MKを100回", "match": "中距離は5MKだけ", "review": "5MK当たった回数" },
+        { "day": 4, "training": "2LP→2LP→214Pを50回", "match": "当たったら出す", "review": "決まった回数" },
+        { "day": 5, "training": "5MK→DR→投げ", "match": "ガードでも投げ", "review": "DRで触れた回数" },
+        { "day": 6, "training": "投げ抜け練習", "match": "防御優先", "review": "投げ抜けできた？" },
+        { "day": 7, "training": "通し実戦（メモ）", "match": "5MK/対空/214Pだけ見る", "review": "数字で記録" }
+      ],
+      "warnings": ["欲張ってコンボを伸ばさない", "まず623P対空", "触る→止まる→投げ"]
+    }
+  ],
+
+  "diagnosis": {
+    "questions": [
+      { "id": "Q1", "text": "まずは“負けにくい”キャラがいい？" },
+      { "id": "Q2", "text": "弾（飛び道具）で相手を動かしたい？" },
+      { "id": "Q3", "text": "チャージ（溜め）入力でも平気？" },
+      { "id": "Q4", "text": "近距離の投げが好き？" },
+      { "id": "Q5", "text": "重い一撃（パワー）で勝ちたい？" },
+      { "id": "Q6", "text": "速い攻め（ラッシュ多め）が好き？" },
+      { "id": "Q7", "text": "“育てるキャラ”（強化要素）が好き？" }
+    ],
+    "scoreYesOnly": {
+      "Q1": { "ryu": 2, "luke": 2, "marisa": 1, "ken": 0, "chunli": 0, "guile": 2, "jamie": 0, "ed": 1 },
+      "Q2": { "ryu": 2, "luke": 1, "marisa": 0, "ken": 1, "chunli": 1, "guile": 3, "jamie": 0, "ed": 1 },
+      "Q3": { "ryu": 0, "luke": 0, "marisa": 0, "ken": 0, "chunli": 2, "guile": 3, "jamie": 0, "ed": 0 },
+      "Q4": { "ryu": 1, "luke": 2, "marisa": 2, "ken": 2, "chunli": 1, "guile": 0, "jamie": 1, "ed": 1 },
+      "Q5": { "ryu": 0, "luke": 0, "marisa": 3, "ken": 0, "chunli": 0, "guile": 0, "jamie": 0, "ed": 0 },
+      "Q6": { "ryu": 0, "luke": 1, "marisa": 0, "ken": 3, "chunli": 2, "guile": 0, "jamie": 1, "ed": 1 },
+      "Q7": { "ryu": 0, "luke": 0, "marisa": 0, "ken": 0, "chunli": 0, "guile": 0, "jamie": 3, "ed": 0 }
+    }
+  }
+}
