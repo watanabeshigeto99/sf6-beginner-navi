@@ -46,6 +46,7 @@ export type Character = {
   id: string;
   name: string;
   concept: string;
+  emergencyLine: string;
   minimalKit: MinimalKitItem[];
   winPlan: WinPlan;
   matchNav: MatchNav;
