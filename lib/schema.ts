@@ -41,6 +41,7 @@ export const CharacterSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
   concept: z.string().min(1),
+  emergencyLine: z.string().min(1),
   minimalKit: z.array(MinimalKitItemSchema).length(5),
   winPlan: WinPlanSchema,
   matchNav: MatchNavSchema,

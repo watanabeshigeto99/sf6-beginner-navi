@@ -6,6 +6,8 @@
       "id": "ryu",
       "name": "リュウ",
       "concept": "波動で動かして、飛びは昇龍。中距離の判断で勝つキャラ",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
+
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝昇龍拳", "note": "最初は弱P版だけでOK" },
         { "key": "poke", "label": "牽制（1個）", "input": "236P（↓↘→ + P）＝波動拳", "note": "当てる必要なし。撃ったら対空準備" },
@@ -45,6 +47,7 @@
       "id": "luke",
       "name": "ルーク",
       "concept": "強い通常技で触って、ラッシュで近づいて、投げで崩す",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝ライジングアッパー", "note": "最初は弱P版だけでOK" },
         { "key": "poke", "label": "牽制（1個）", "input": "2MP（しゃがみ中P）", "note": "中距離は基本これだけ" },
@@ -84,6 +87,7 @@
       "id": "marisa",
       "name": "マリーザ",
       "concept": "一撃が重い。触ったら押し切る“単純で強い”パワーキャラ",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "2HP（しゃがみ強P）", "note": "まず“出る対空”を1個固定" },
         { "key": "poke", "label": "牽制（1個）", "input": "5MP（立ち中P）", "note": "中距離はこれで触る" },
@@ -123,6 +127,7 @@
       "id": "ken",
       "name": "ケン",
       "concept": "素早く触って一気に近距離へ。攻めのテンプレが強い",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝昇龍拳", "note": "最初は弱P版固定でOK" },
         { "key": "poke", "label": "牽制（1個）", "input": "2MK（しゃがみ中K）", "note": "中距離はこれで触る" },
@@ -162,6 +167,7 @@
       "id": "chunli",
       "name": "春麗",
       "concept": "中距離の制圧と対空が強い。チャージに慣れると一気に安定",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "22K（↓↓ + K）＝天昇脚（Tensho Kicks）", "note": "入力が簡単で初心者向き" },
         { "key": "poke", "label": "牽制（1個）", "input": "5MK（立ち中K）", "note": "中距離で触る主力" },
@@ -201,6 +207,7 @@
       "id": "guile",
       "name": "ガイル",
       "concept": "弾と対空で“負けない”。守りの型がそのまま勝ち筋になる",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "[溜め]2→8K（下溜め→上 + K）＝フラッシュキック", "note": "溜めは“しゃがみガード”で兼ねる" },
         { "key": "poke", "label": "牽制（1個）", "input": "2MP（しゃがみ中P）", "note": "地上はこれで触る" },
@@ -240,6 +247,7 @@
       "id": "jamie",
       "name": "ジェイミー",
       "concept": "まず飲む→強くなる。触ったら連携で押す“育成型”",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "623K（→↓↘ + K）＝アローキック", "note": "まずこれだけでOK" },
         { "key": "poke", "label": "牽制（1個）", "input": "2MK（しゃがみ中K）", "note": "中距離はこれで触る" },
@@ -279,6 +287,7 @@
       "id": "ed",
       "name": "エド",
       "concept": "長い通常技で触って、ブリッツで締める。反応対空も強い",
+      "emergencyLine": "困ったら：まず守り→無理しない→飛びは対空",
       "minimalKit": [
         { "key": "antiAir", "label": "対空（1個）", "input": "623P（→↓↘ + P）＝サイコアッパー（Psycho Uppercut）", "note": "まず弱P版でOK" },
         { "key": "poke", "label": "牽制（1個）", "input": "5MK（立ち中K）", "note": "長い通常技で触る意識" },
